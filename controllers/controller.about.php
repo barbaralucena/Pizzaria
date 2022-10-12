@@ -1,6 +1,6 @@
 <?php
+    $title= "about";
 
-$title= "home";
 require("views/view.home.php");
 
 ?>
