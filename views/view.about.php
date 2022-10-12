@@ -41,5 +41,4 @@
 
 </section>
 
-</body>
-</html>
+<?php require("layout/view.footer.php")?>

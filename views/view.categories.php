@@ -1,19 +1,18 @@
-
 <?php
     require("layout/view.header.php");
-?>
-<ul>
-<?php
 
-    foreach($categories as $category){
+    foreach($products as $product){
         echo '
-        <li>
-           '.$category["name"].'
-        </li>
+        <section style="border: 10px solid #000">
+        <a href="/products/'.$product["product_id"].'">
+                <img src="'.$product["image"].'">
+                <h2>'.$product["name"].'</h2>
+                <p>'.$product["price"].'€</p>
+        </a>
+        </section>
         ';
-    }
-?>
-            </ul>
 
-    </body>
-</html>
+    }
+
+    require("layout/view.footer.php")
+?>

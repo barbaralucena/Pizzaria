@@ -5,13 +5,11 @@ class Products extends Base {
     public function getProducts($category_id){
         $query = $this->db->prepare("
             SELECT 
-                products.product_id, products.name, products.image, products.price,categories.name
+                product_id, name, image, price
             FROM 
                 products
-            INNER JOIN 
-                categories USING(category_id)
             WHERE 
-                products.category_id= ?
+                category_id= ?
         ");
     $query->execute([$category_id]);
     return $query->fetchAll();

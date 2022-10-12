@@ -9,5 +9,6 @@
             </div>  
         ';          
 ?>
+<?php require("layout/view.footer.php")?>
 
     
