@@ -13,6 +13,5 @@
         ';
 
     }
-
     require("layout/view.footer.php")
 ?>

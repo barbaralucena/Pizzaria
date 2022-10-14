@@ -7,12 +7,12 @@
 
     foreach($categories as $category){
         echo '
-        <li>
-           <a href="/menu/'.$category["category_id"].'">'.$category["name"].'</a>
+        <li class="card" style="width: 18rem;">
+           <a href="/menu/'.$category["category_id"].'"class="card-title" >'.$category["name"].'</a>
         </li>
         ';
     }
 ?>
             </ul>
 
-            <?php require("layout/view.footer.php")?>
+<?php require("layout/view.footer.php")?>

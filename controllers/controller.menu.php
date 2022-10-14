@@ -14,6 +14,5 @@
         require("views/view.categories.php");
         exit;
     }
-    
-    $title= "menu";
+    $title="menu";
     require("views/view.menu.php");

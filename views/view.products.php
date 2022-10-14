@@ -1,14 +1,22 @@
 <?php
-    require("layout/header.php");
-        echo '
-            <div class="product-container">
-                <h1>'.$products["name"].'</h1>
-                <img>'.$products["image"].'</img>
-                <p>'.$products["description"].'</p>
-                <p>'.$products["price"].'</p>
-            </div>  
-        ';          
+    require("layout/view.header.php");
 ?>
-<?php require("layout/view.footer.php")?>
+    <div class="product-page">
+        <?php
+        echo '
+            <h1>'.$products["name"].'</h1>
+            <img src="'.$products["image"].'"></img>
+            <p>'.$products["description"].'</p>
+            <p>'.$products["price"].'€</p>
+           
+        '; 
+?>
+        <button type="submit" name="send">Pedir</button>
+    </div>  
+           
+    
+<?php
+ require("layout/view.footer.php")
+ ?>
 
     
