@@ -5,7 +5,7 @@
     public function getUsers(){
         $query= $this-> db-> prepare("
                 SELECT
-                    user_id, name, email, password, phone_number, street, postal_code, city
+                    user_id, name, email, password, phone_number, street, postal_code, city, isAdmin
                 FROM
                     users   
             ");
@@ -15,11 +15,10 @@
     }
 
     public function create($data){
-        $data= $this-> sanitizer($data);
         $query= $this-> db-> prepare("
                 INSERT INTO users
-                (name, email, password, phone_number, street, postal_code, city)
-                VALUES(?, ?, ?, ?, ?, ?, ?)
+                (name, email, password, phone_number, street, postal_code, city, isAdmin)
+                VALUES(?, ?, ?, ?, ?, ?, ?, ?)
             ");
 
             $query-> execute([
@@ -30,9 +29,20 @@
                 $data["street"],
                 $data["postal_code"],
                 $data["city"],
+                0
             ]); 
 
-            return $this-> db-> lastInsertId();
+            $lastCreatedUserId= $this->db->lastInsertId();
+            $query=this->db->prepare("
+            SELECT
+                user_id, name, email, password, phone_number, street, postal_code, city, isAdmin
+            FROM
+                users 
+            WHERE
+                user_id=?     
+            ");
+            $query->execute[$lastCreatedUserId];
+            return $query->fetch();
         }
 
         public function login($data){
