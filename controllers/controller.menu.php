@@ -11,6 +11,10 @@
         $modelProducts= new Products();
         $products= $modelProducts-> getProducts($id);
         
+        $category= $modelCategories-> getCategory($id);
+
+        $title= $category["name"];
+
         require("views/view.categories.php");
         exit;
     }

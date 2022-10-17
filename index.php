@@ -19,7 +19,9 @@ $controllers= [
     "about",
     "menu",
     "products",
-    "categories"
+    "register",
+    "orders",
+    "login"
 ];
 
 $controller = $url_parts[1] ?: "home";
