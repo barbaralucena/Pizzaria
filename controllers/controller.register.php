@@ -34,10 +34,10 @@
             mb_strlen($_POST["city"])<= 32                    
         ){
         
-            $user_id= $modelUsers-> create($_POST);
+            $user= $modelUsers-> create($_POST);
 
-            if(!empty($user_id)){
-                $_SESSION["user_id"]= $user_id;
+            if(!empty($user)){
+                $_SESSION["user"]= $user;
                 header("Location: /");
             }
             else{

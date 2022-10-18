@@ -5,8 +5,6 @@
     $modelCategories= new Categories();
     $categories= $modelCategories-> getCategories();
     
-    
-    
     if(!empty($id) && is_numeric($id)){
         $modelProducts= new Products();
         $products= $modelProducts-> getProducts($id);
