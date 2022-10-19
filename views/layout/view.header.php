@@ -30,7 +30,7 @@
             <?php
                 if(isset($_SESSION["user"])){
                     echo '
-                        <a href="/profile">
+                        <a href="/account">
                             '.$_SESSION["user"]["name"].'
                         </a>
                         <a href="/cart">
