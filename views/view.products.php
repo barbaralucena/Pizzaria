@@ -11,7 +11,7 @@
            
         '; 
 ?>
- <form method="post" action="<?php echo ROOT;?>/cart">
+ <form method="post" action="/cart">
                     <div>
                         <label>
                             Quantidade
@@ -26,12 +26,11 @@
                         <input 
                             type="hidden" 
                             name="product_id" 
-                            value="<?php echo $product["product_id"];?>"
+                            value="<?= $product["product_id"];?>"
                         >
                         <button type="submit" name="send">Adicionar</button>
                     </div>
                 </form>
-        <button type="submit" name="send">Pedir</button>
     </div>  
            
     

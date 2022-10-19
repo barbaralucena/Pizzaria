@@ -47,9 +47,12 @@
 
         public function login($data){
             $query= $this-> db-> prepare("
-                SELECT user_id, password
-                FROM users
-                WHERE email= ?
+                SELECT 
+                    user_id, name, email, password, phone_number, street, postal_code, city, isAdmin
+                FROM 
+                    users
+                WHERE 
+                    email= ?
             ");
 
             $query-> execute([

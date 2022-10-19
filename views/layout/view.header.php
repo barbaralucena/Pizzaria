@@ -27,10 +27,25 @@
         </nav>
 
         <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            <a href="/register"><div id="user-btn" class="fas fa-user"></div></a>
-            <div id="order-btn" class="fas fa-box"></div>
-            <a href="/cart"><div id="cart-btn" class="fas fa-shopping-cart"></div></a>
+            <?php
+                if(isset($_SESSION["user"])){
+                    echo '
+                        <a href="/profile">
+                            '.$_SESSION["user"]["name"].'
+                        </a>
+                        <a href="/cart">
+                            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+                        </a>
+                    ';
+                }
+                else{
+                    echo '
+                        <a href="/login">
+                            <div id="user-btn" class="fas fa-user"></div>
+                        </a>
+                    ';
+                }
+            ?>
         </div>
 
         </section>
