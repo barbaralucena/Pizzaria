@@ -1,7 +1,13 @@
 <?php
     require("models/model.users.php");
     $modelUsers= new Users();
+    $users= $modelUsers-> getUsers();
 
+    $emails= [];
+
+    foreach($users as $user){
+        $emails[]= $user["email"];
+    }
     $title="Criar conta";
     session_unset();
     if(
@@ -33,15 +39,25 @@
             mb_strlen($_POST["city"])>= 4                       &&
             mb_strlen($_POST["city"])<= 32                    
         ){
-        
-            $user= $modelUsers-> create($_POST);
+            if(!in_array($_POST["email"], $emails)){
+                $user= $modelUsers-> create($_POST);
 
-            if(!empty($user)){
-                $_SESSION["user"]= $user;
-                header("Location: /");
-            }
+                    if(!empty($user)){
+                    $_SESSION["user"]= $user;
+                    header("Location: /");
+                    }
+                    else{
+                    http_response_code(500);
+        
+                    $message= "Internal Server Error";
+                    $title= "Error";
+
+                    require("views/view.error.php");
+                    exit;
+                    }
+                }
             else{
-                $message= "Este utilizador já existe";
+                $message= "Email indisponível";
             }
         }
         else{

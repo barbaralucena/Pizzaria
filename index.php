@@ -20,8 +20,13 @@ $controllers= [
     "menu",
     "products",
     "register",
-    "orders",
-    "login"
+    "login",
+    "logout",
+    "cart",
+    "quantitychange",
+    "removeproduct",
+    "checkout",
+    "admin"
 ];
 
 $controller = $url_parts[1] ?: "home";

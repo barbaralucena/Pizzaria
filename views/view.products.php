@@ -11,6 +11,26 @@
            
         '; 
 ?>
+ <form method="post" action="<?php echo ROOT;?>/cart">
+                    <div>
+                        <label>
+                            Quantidade
+                            <input 
+                                type="number" 
+                                name="quantity" 
+                                min="1" 
+                                max="10" 
+                                value="1" 
+                                required>
+                        </label>
+                        <input 
+                            type="hidden" 
+                            name="product_id" 
+                            value="<?php echo $product["product_id"];?>"
+                        >
+                        <button type="submit" name="send">Adicionar</button>
+                    </div>
+                </form>
         <button type="submit" name="send">Pedir</button>
     </div>  
            
