@@ -2,3 +2,25 @@
     font-size: 50px;
 }
 
+a{
+    color: #000;
+    
+}
+
+.subtitle-home, .description-home, .menu-home{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu-home:hover{
+color: white;
+}
+
+a:hover{
+    color: chocolate;
+
+}
+
+li{font-size: 20px;}
+
+p{font-size: 15px;}

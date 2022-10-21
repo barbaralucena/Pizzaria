@@ -26,8 +26,7 @@ $controllers= [
     "removeproduct",
     "checkout",
     "admin",
-    "account",
-    
+    "account"
 ];
 
 $controller = $url_parts[1] ?: "home";
