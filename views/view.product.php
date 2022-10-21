@@ -4,10 +4,10 @@
     <div class="product-page">
         <?php
         echo '
-            <h1 class="product-title">'.$products["name"].'</h1>
-            <img src="'.$products["image"].'"></img>
-            <p>'.$products["description"].'</p>
-            <p>'.$products["price"].'€</p>
+            <h1 class="product-title">'.$product["name"].'</h1>
+            <img src="'.$product["image"].'"></img>
+            <p>'.$product["description"].'</p>
+            <p>'.$product["price"].'€</p>
            
         '; 
 ?>

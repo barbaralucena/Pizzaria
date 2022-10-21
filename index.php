@@ -16,7 +16,6 @@ $url_parts = explode("/", $_SERVER["REQUEST_URI"]);
 
 $controllers= [
     "home",
-    "about",
     "menu",
     "products",
     "register",
@@ -27,7 +26,8 @@ $controllers= [
     "removeproduct",
     "checkout",
     "admin",
-    "account"
+    "account",
+    
 ];
 
 $controller = $url_parts[1] ?: "home";

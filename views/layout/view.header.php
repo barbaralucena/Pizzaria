@@ -21,9 +21,7 @@
 
         <nav class="navbar">
             <a href="/home">home</a>
-            <a href="/about">about</a>
             <a href="/menu">menu</a>
-            <a href="/order">order</a>
         </nav>
 
         <div class="icons">

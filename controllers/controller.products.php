@@ -3,9 +3,9 @@
     require("models/model.products.php");
 
     $modelProducts= new Products();
-    $products= $modelProducts-> getProduct($id);
+    $product= $modelProducts-> getProduct($id);
     
-    if(empty($products)){
+    if(empty($product)){
         http_response_code(404);
     
         $message= "Not Found";
@@ -15,6 +15,6 @@
         exit;
     }
     
-    $title= $products["name"];
+    $title= $product["name"];
     
-    require("views/view.products.php");
+    require("views/view.product.php");

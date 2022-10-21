@@ -7,8 +7,8 @@
 
     foreach($categories as $category){
         echo '      
-        <li class="card-title" style="width: 18rem;">
-           <a href="/menu/'.$category["category_id"].'"class="card-title" >'.$category["name"].'</a>
+        <li>
+           <a href="/menu/'.$category["category_id"].'" >'.$category["name"].'</a>
         </li>
         ';
     }

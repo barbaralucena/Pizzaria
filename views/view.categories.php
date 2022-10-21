@@ -3,13 +3,13 @@
 
     foreach($products as $product){
         echo '
-        <section style="border: 10px solid #000">
+        <div class="card">
         <a href="/products/'.$product["product_id"].'">
                 <img src="'.$product["image"].'">
                 <h2>'.$product["name"].'</h2>
                 <p>'.$product["price"].'€</p>
         </a>
-        </section>
+        </div>
         ';
 
     }

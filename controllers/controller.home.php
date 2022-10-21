@@ -1,6 +1,6 @@
 <?php
 
-$title= "home";
+$title= "Pizza.";
 require("views/view.home.php");
 
 ?>

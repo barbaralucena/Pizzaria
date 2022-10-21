@@ -5,12 +5,13 @@
         public function create($user_id){
             $query= $this-> db-> prepare("
                 INSERT INTO orders
-                (user_id)
-                VALUES(?)
+                (user_id, status)
+                VALUES(?, ?)
             ");
 
             $query-> execute([
-                $user_id
+                $_SESSION["user"]["user_id"],
+                "Em preparação"
             ]);
 
             return $this-> db-> lastInsertId();
