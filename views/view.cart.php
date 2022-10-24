@@ -21,7 +21,7 @@
             $total= 0;
             foreach($_SESSION["cart"] as $product){
                 echo '
-                    <tr>
+                    <tr data-product_id="'.$product["product_id"].'" data-price="'.$product["price"].'">
                         <td>'.$product["name"].'</td>
                         <td>
                             <input 
@@ -33,18 +33,18 @@
                             >
                         </td>
                         <td>'.$product["price"].'€</td>
-                        <td>'.($product["price"]*$product["quantity"]).'€</td>
+                        <td><span class="subtotal">'.($product["price"]*$product["quantity"]).'</span>€</td>
                         <td>
                             <button type="button" class="removeItemCart" data-product_id="'.$product["product_id"].'"><i class="fa-regular fa-x"></i></button>
                         </td>
                     </tr>
                 ';
                 $total= $total+ ($product["price"]*$product["quantity"]);
-            }     
+            }
         ?>                  
                         <tr>
                             <td colspan="3">Total</td>
-                            <td colspan="2"><?php echo $total;?>€</td>
+                            <td colspan="2"><span class="total"><?php echo $total;?>€</td>
                         </tr>
                     </tbody>
                 </table>

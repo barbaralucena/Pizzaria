@@ -5,6 +5,7 @@
         unset($_SESSION["cart"][$_POST["removeItem_id"]]);
 
         $message= "Item removido com sucesso";
+       
     }
     else{
         http_response_code(405);

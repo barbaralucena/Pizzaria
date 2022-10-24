@@ -8,7 +8,7 @@
     }
 ?>
         <p>
-            Se ainda não tiver conta<a href="/register">crie uma aqui</a>
+            Se ainda não tiver conta <a href="/register">crie uma aqui</a>
         </p>
         <form method="post" action="/login">
             <div>
